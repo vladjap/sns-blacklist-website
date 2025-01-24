@@ -24,9 +24,11 @@ export const lokalQueryKeys = createQueryKeys(["lokal"], {
 export const useGetLokalsQuery = ({
   sort,
   filter,
+  limit = 10,
 }: {
-  filter?: LokalFilterType | undefined;
-  sort?: LokalSortType | undefined;
+  filter?: LokalFilterType;
+  sort?: LokalSortType;
+  limit?: number;
 } = {}) => {
   const fetch = useGetLokalsService();
 
@@ -37,7 +39,7 @@ export const useGetLokalsQuery = ({
       const { status, data } = await fetch(
         {
           page: pageParam,
-          limit: 10,
+          limit,
           filters: filter,
           sort: sort ? [sort] : undefined,
         },

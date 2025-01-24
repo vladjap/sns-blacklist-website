@@ -22,6 +22,7 @@ import GoogleAuthProvider from "@/services/social-auth/google/google-auth-provid
 import FacebookAuthProvider from "@/services/social-auth/facebook/facebook-auth-provider";
 import ConfirmDialogProvider from "@/components/confirm-dialog/confirm-dialog-provider";
 import InitColorSchemeScript from "@/components/theme/init-color-scheme-script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 type Props = {
   params: Promise<{ language: string }>;
@@ -80,6 +81,7 @@ export default async function RootLayout(props: {
           </ThemeProvider>
         </QueryClientProvider>
       </body>
+      <GoogleAnalytics gaId="G-P7J1R9PJQC" />
     </html>
   );
 }

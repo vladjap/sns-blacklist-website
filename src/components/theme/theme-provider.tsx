@@ -13,7 +13,10 @@ function ThemeProvider(props: PropsWithChildren<{}>) {
         cssVariables: {
           colorSchemeSelector: "class",
         },
-        colorSchemes: { light: true, dark: true },
+        colorSchemes: { light: true },
+        palette: {
+          mode: "light",
+        },
       }),
     []
   );

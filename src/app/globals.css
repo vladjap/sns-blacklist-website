@@ -1,1 +1,5 @@
 /* Your global CSS here */
+
+body {
+    background: url('/ruke.svg');
+}

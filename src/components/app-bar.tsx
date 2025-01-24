@@ -47,6 +47,10 @@ function ResponsiveAppBar() {
     setAnchorElementUser(null);
   };
 
+  if (user?.role?.id !== 1) {
+    return;
+  }
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
