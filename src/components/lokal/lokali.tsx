@@ -78,7 +78,10 @@ function Lokali() {
       <StyledItemWrapper>
         {dataArray?.data
           .filter((lokal) => {
-            return lokal.name.toLowerCase().includes(searchValue.toLowerCase());
+            return (
+              lokal.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+              lokal.city?.toLowerCase().includes(searchValue.toLowerCase())
+            );
           })
           .map((lokal) => {
             return (
