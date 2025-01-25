@@ -143,7 +143,7 @@ function MultipleImagePicker(props: MultipleImagePickerProps) {
                     />
                   </IconButton>
                 </StyledOverlay>
-                <img src={item.path} loading="lazy" />
+                {/*<img src={item.path} loading="lazy" />*/}
               </ImageListItem>
             ))}
           </ImageList>

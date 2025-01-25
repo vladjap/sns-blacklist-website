@@ -142,7 +142,7 @@ function ImagePicker(props: ImagePickerProps) {
                   />
                 </IconButton>
               </StyledOverlay>
-              <img src={props.value.path} loading="lazy" />
+              {/*<img alt="alt" src={props.value.path} loading="lazy" />*/}
             </ImageListItem>
           </ImageList>
         </>

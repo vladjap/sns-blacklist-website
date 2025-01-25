@@ -34,6 +34,7 @@ const StyledItem = styled("div")`
 function Lokali() {
   const searchParams = useSearchParams();
   const [searchValue, setSearchValue] = useState<string>("");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [{ order, orderBy }, setSort] = useState<{
     order: SortEnum;
     orderBy: LokalKeys;
@@ -63,7 +64,9 @@ function Lokali() {
   const dataArray = data?.pages[0];
 
   return (
+    // eslint-disable-next-line no-restricted-syntax
     <div style={{ marginBottom: "50px" }}>
+      {/* eslint-disable-next-line no-restricted-syntax */}
       <div style={{ background: "#ffffffe6", padding: "20px" }}>
         <TextField
           fullWidth

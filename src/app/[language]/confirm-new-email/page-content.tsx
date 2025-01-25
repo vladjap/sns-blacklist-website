@@ -62,7 +62,7 @@ export default function ConfirmNewEmail() {
       }
     };
 
-    confirm();
+    void confirm();
   }, [
     fetchConfirmNewEmail,
     router,
@@ -71,6 +71,7 @@ export default function ConfirmNewEmail() {
     isLoaded,
     setUser,
     fetchAuthGetMe,
+    user,
   ]);
 
   return (
