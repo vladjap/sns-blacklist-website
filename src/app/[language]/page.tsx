@@ -23,12 +23,12 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       siteName: "SNS Blacklist",
       images: [
         {
-          url: "https://snsblacklist.com/ruke.svg",
+          url: "https://snsblacklist.com/ruke-800-600.webp",
           width: 800,
           height: 600,
         },
         {
-          url: "https://snsblacklist.com/ruke.svg",
+          url: "https://snsblacklist.com/ruke-1800-1600.webp",
           width: 1800,
           height: 1600,
           alt: "Ruke",
