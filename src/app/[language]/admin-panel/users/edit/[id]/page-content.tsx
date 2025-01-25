@@ -25,6 +25,7 @@ import {
 import { useParams } from "next/navigation";
 import { Role, RoleEnum } from "@/services/api/types/role";
 import FormSelectInput from "@/components/form/select/form-select";
+import useBodyBackground from "@/hooks/useBodyBackground";
 
 type EditUserFormData = {
   email: string;
@@ -135,6 +136,7 @@ function FormEditUser() {
   const { t } = useTranslation("admin-panel-users-edit");
   const validationSchema = useValidationEditUserSchema();
   const { enqueueSnackbar } = useSnackbar();
+  useBodyBackground();
 
   const methods = useForm<EditUserFormData>({
     resolver: yupResolver(validationSchema),

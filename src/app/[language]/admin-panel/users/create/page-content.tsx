@@ -21,6 +21,7 @@ import { usePostUserService } from "@/services/api/services/users";
 import { useRouter } from "next/navigation";
 import { Role, RoleEnum } from "@/services/api/types/role";
 import FormSelectInput from "@/components/form/select/form-select";
+import useBodyBackground from "@/hooks/useBodyBackground";
 
 type CreateFormData = {
   email: string;
@@ -105,6 +106,7 @@ function FormCreateUser() {
   const validationSchema = useValidationSchema();
 
   const { enqueueSnackbar } = useSnackbar();
+  useBodyBackground();
 
   const methods = useForm<CreateFormData>({
     resolver: yupResolver(validationSchema),

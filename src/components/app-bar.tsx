@@ -19,7 +19,6 @@ import { useTranslation } from "@/services/i18n/client";
 import Link from "@/components/link";
 import { RoleEnum } from "@/services/api/types/role";
 import Divider from "@mui/material/Divider";
-import ThemeSwitchButton from "@/components/switch-theme-button";
 import { IS_SIGN_UP_ENABLED } from "@/services/auth/config";
 
 function ResponsiveAppBar() {
@@ -120,6 +119,14 @@ function ResponsiveAppBar() {
                       {t("common:navigation.users")}
                     </Typography>
                   </MenuItem>,
+                  <MenuItem
+                    key="lokals"
+                    onClick={handleCloseNavMenu}
+                    component={Link}
+                    href="/admin-panel/lokals"
+                  >
+                    <Typography textAlign="center">Lokals</Typography>
+                  </MenuItem>,
                   // mobile-menu-items
                 ]}
               {isLoaded &&
@@ -189,19 +196,27 @@ function ResponsiveAppBar() {
                   >
                     {t("common:navigation.users")}
                   </Button>
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "white", display: "block" }}
+                    component={Link}
+                    href="/admin-panel/lokals"
+                  >
+                    Lokali
+                  </Button>
                   {/* desktop-menu-items */}
                 </>
               )}
           </Box>
 
-          <Box
-            sx={{
-              display: "flex",
-              mr: 1,
-            }}
-          >
-            <ThemeSwitchButton />
-          </Box>
+          {/*<Box*/}
+          {/*  sx={{*/}
+          {/*    display: "flex",*/}
+          {/*    mr: 1,*/}
+          {/*  }}*/}
+          {/*>*/}
+          {/*  <ThemeSwitchButton />*/}
+          {/*</Box>*/}
 
           {!isLoaded ? (
             <CircularProgress color="inherit" />
@@ -287,4 +302,5 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
+
 export default ResponsiveAppBar;

@@ -44,6 +44,7 @@ import Paper from "@mui/material/Paper";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import MenuList from "@mui/material/MenuList";
 import MenuItem from "@mui/material/MenuItem";
+import useBodyBackground from "@/hooks/useBodyBackground";
 
 type LokalKeys = keyof Lokal;
 
@@ -250,6 +251,7 @@ function Users() {
     }
     return { order: SortEnum.DESC, orderBy: "id" };
   });
+  useBodyBackground();
 
   const handleRequestSort = (
     event: React.MouseEvent<unknown>,

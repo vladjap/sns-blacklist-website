@@ -42,6 +42,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import TableSortLabel from "@mui/material/TableSortLabel";
 import { UserFilterType, UserSortType } from "./user-filter-types";
 import { SortEnum } from "@/services/api/types/sort-type";
+import useBodyBackground from "@/hooks/useBodyBackground";
 
 type UsersKeys = keyof User;
 
@@ -250,6 +251,7 @@ function Users() {
     }
     return { order: SortEnum.DESC, orderBy: "id" };
   });
+  useBodyBackground();
 
   const handleRequestSort = (
     event: React.MouseEvent<unknown>,

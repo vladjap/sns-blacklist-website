@@ -20,6 +20,7 @@ import {
   useGetLokalService,
   usePatchLokalService,
 } from "@/services/api/services/lokals";
+import useBodyBackground from "@/hooks/useBodyBackground";
 
 type EditLokalFormData = {
   name: string;
@@ -59,6 +60,7 @@ function FormEditUser() {
   const { t } = useTranslation("admin-panel-users-edit");
   const validationSchema = useValidationEditUserSchema();
   const { enqueueSnackbar } = useSnackbar();
+  useBodyBackground();
 
   const methods = useForm<EditLokalFormData>({
     resolver: yupResolver(validationSchema),

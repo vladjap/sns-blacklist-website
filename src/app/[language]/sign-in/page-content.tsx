@@ -107,7 +107,11 @@ function Form() {
 
   return (
     <FormProvider {...methods}>
-      <Container maxWidth="xs">
+      <Container
+        maxWidth="xs"
+        /* eslint-disable-next-line no-restricted-syntax */
+        style={{ background: "#ccc", paddingBottom: "30px", marginTop: "30px" }}
+      >
         <form onSubmit={onSubmit}>
           <Grid container spacing={2} mb={2}>
             <Grid size={{ xs: 12 }} mt={3}>
@@ -131,15 +135,15 @@ function Form() {
                 testId="password"
               />
             </Grid>
-            <Grid size={{ xs: 12 }}>
-              <LinkItem
-                component={Link}
-                href="/forgot-password"
-                data-testid="forgot-password"
-              >
-                {t("sign-in:actions.forgotPassword")}
-              </LinkItem>
-            </Grid>
+            {/*<Grid size={{ xs: 12 }}>*/}
+            {/*  <LinkItem*/}
+            {/*    component={Link}*/}
+            {/*    href="/forgot-password"*/}
+            {/*    data-testid="forgot-password"*/}
+            {/*  >*/}
+            {/*    {t("sign-in:actions.forgotPassword")}*/}
+            {/*  </LinkItem>*/}
+            {/*</Grid>*/}
 
             <Grid size={{ xs: 12 }}>
               <FormActions />

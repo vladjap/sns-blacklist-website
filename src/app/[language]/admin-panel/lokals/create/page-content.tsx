@@ -17,6 +17,7 @@ import HTTP_CODES_ENUM from "@/services/api/types/http-codes";
 import { useTranslation } from "@/services/i18n/client";
 import { useRouter } from "next/navigation";
 import { usePostLokalService } from "@/services/api/services/lokals";
+import useBodyBackground from "@/hooks/useBodyBackground";
 
 type CreateFormData = {
   name: string;
@@ -56,6 +57,8 @@ function FormCreateLokal() {
   const validationSchema = useValidationSchema();
 
   const { enqueueSnackbar } = useSnackbar();
+  useBodyBackground();
+
 
   const methods = useForm<CreateFormData>({
     resolver: yupResolver(validationSchema),

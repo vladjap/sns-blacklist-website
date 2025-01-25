@@ -6,9 +6,11 @@ import { useTranslation } from "@/services/i18n/client";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
+import useBodyBackground from "@/hooks/useBodyBackground";
 
 function AdminPanel() {
   const { t } = useTranslation("admin-panel-home");
+  useBodyBackground();
 
   return (
     <Container maxWidth="md">
