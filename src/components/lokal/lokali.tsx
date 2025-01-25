@@ -43,7 +43,7 @@ function Lokali() {
     if (searchParamsSort) {
       return JSON.parse(searchParamsSort);
     }
-    return { order: SortEnum.DESC, orderBy: "id" };
+    return { order: SortEnum.ASC, orderBy: "name" };
   });
 
   const filter = useMemo(() => {
@@ -84,6 +84,7 @@ function Lokali() {
             return (
               <StyledItem key={lokal.id}>
                 {lokal.name}
+                {lokal.city ? `, ${lokal.city}` : ""}{" "}
                 <a href={lokal.google_map_link}>Google map</a>
               </StyledItem>
             );
