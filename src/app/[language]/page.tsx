@@ -46,32 +46,35 @@ export default async function Home(props: Props) {
   return (
     <Container maxWidth="xl">
       <Grid size="grow">
-        <Typography
-          mt={5}
-          textAlign="center"
-          variant="h3"
-          data-testid="home-title"
-          gutterBottom
-        >
-          {t("title")}
-        </Typography>
-        <Typography textAlign="center" mb={3}>
-          За више детаља посетите инстаграм страницу{" "}
-          <a href="https://www.instagram.com/sistem.restart?igsh=djY5bWw4bmljZTJ4">
-            SISTEM/СИСТЕМ
-          </a>
-          .
-          <br />
-          <a href="https://www.google.com/maps/@44.7080531,17.6487525,7z/data=!4m3!11m2!2suimhzfjWSxO2ldC6sz4HgA!3e3?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw==">
-            Додатни списак можете погледати овде.
-          </a>
-          <br />
-          са Reddit-a:{" "}
-          <a href="https://www.reddit.com/r/serbia/comments/1i8g4j7/megathread_spisak_ugostiteljskih_objekata_koji_su/?share_id=2QyWlGUo8q8HdOoQAPR3h&utm_medium=android_app&utm_name=androidcss&utm_source=share&utm_term=1">
-            [Megathread] Spisak ugostiteljskih objekata koji su se izrugali
-            studentima
-          </a>
-        </Typography>
+        {/* eslint-disable-next-line no-restricted-syntax */}
+        <div style={{ background: "#FFFFFFCC", padding: "20px" }}>
+          <Typography
+            mt={5}
+            textAlign="center"
+            variant="h3"
+            data-testid="home-title"
+            gutterBottom
+          >
+            {t("title")}
+          </Typography>
+          <Typography textAlign="center" mb={3}>
+            За више детаља посетите инстаграм страницу{" "}
+            <a href="https://www.instagram.com/sistem.restart?igsh=djY5bWw4bmljZTJ4">
+              SISTEM/СИСТЕМ
+            </a>
+            .
+            <br />
+            <a href="https://www.google.com/maps/@44.7080531,17.6487525,7z/data=!4m3!11m2!2suimhzfjWSxO2ldC6sz4HgA!3e3?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw==">
+              Додатни списак можете погледати овде.
+            </a>
+            <br />
+            са Reddit-a:{" "}
+            <a href="https://www.reddit.com/r/serbia/comments/1i8g4j7/megathread_spisak_ugostiteljskih_objekata_koji_su/?share_id=2QyWlGUo8q8HdOoQAPR3h&utm_medium=android_app&utm_name=androidcss&utm_source=share&utm_term=1">
+              [Megathread] Spisak ugostiteljskih objekata koji su se izrugali
+              studentima
+            </a>
+          </Typography>
+        </div>
 
         <Lokali />
       </Grid>
