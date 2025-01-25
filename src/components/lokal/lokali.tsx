@@ -63,6 +63,62 @@ function Lokali() {
 
   const dataArray = data?.pages[0];
 
+  function latinToCyrillic(text: string): string {
+    const map: { [key: string]: string } = {
+      a: "а",
+      b: "б",
+      v: "в",
+      g: "г",
+      d: "д",
+      đ: "ђ",
+      dj: "ђ",
+      e: "е",
+      ž: "ж",
+      z: "з",
+      i: "и",
+      j: "ј",
+      k: "к",
+      l: "л",
+      lj: "љ",
+      m: "м",
+      n: "н",
+      nj: "њ",
+      o: "о",
+      p: "п",
+      r: "р",
+      s: "с",
+      t: "т",
+      ć: "ћ",
+      u: "у",
+      f: "ф",
+      h: "х",
+      c: "ц",
+      č: "ч",
+      dž: "џ",
+      š: "ш",
+    };
+
+    // Detekcija višeslovnih znakova kao što su "lj", "nj", "dž"
+    const specialCases = ["lj", "nj", "dž"];
+    let result = "";
+
+    for (let i = 0; i < text.length; i++) {
+      const twoChar = text.slice(i, i + 2).toLowerCase();
+
+      if (specialCases.includes(twoChar)) {
+        result += map[twoChar];
+        i++; // Preskoči sledeće slovo jer je već obrađeno
+      } else {
+        const char = text[i].toLowerCase();
+        result +=
+          map[char] ||
+          (char.toUpperCase() === text[i] ? char.toUpperCase() : char);
+      }
+    }
+
+    return result;
+  }
+
   return (
     // eslint-disable-next-line no-restricted-syntax
     <div style={{ marginBottom: "50px" }}>
@@ -78,9 +134,15 @@ function Lokali() {
       <StyledItemWrapper>
         {dataArray?.data
           .filter((lokal) => {
+            const searchNormalized = latinToCyrillic(searchValue.toLowerCase());
+            const nameNormalized = latinToCyrillic(lokal.name.toLowerCase());
+            const cityNormalized = lokal.city
+              ? latinToCyrillic(lokal.city.toLowerCase())
+              : "";
+
             return (
-              lokal.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-              lokal.city?.toLowerCase().includes(searchValue.toLowerCase())
+              nameNormalized.includes(searchNormalized) ||
+              cityNormalized.includes(searchNormalized)
             );
           })
           .map((lokal) => {
