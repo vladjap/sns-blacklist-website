@@ -19,16 +19,16 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     openGraph: {
       title: "SNS Blacklist",
       description: "SNS Lokali - blacklist",
-      url: "https://snsblacklist.com",
+      url: "https://snsblacklist.com/rs",
       siteName: "SNS Blacklist",
       images: [
         {
-          url: "https://snsblacklist.com/ruke-800-600.webp",
+          url: "https://snsblacklist.com/ruke-800-600.jpg",
           width: 800,
           height: 600,
         },
         {
-          url: "https://snsblacklist.com/ruke-1800-1600.webp",
+          url: "https://snsblacklist.com/ruke-1800-1600.jpg",
           width: 1800,
           height: 1600,
           alt: "Ruke",
