@@ -3,7 +3,6 @@ import { getServerTranslation } from "@/services/i18n";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
-import { Trans } from "react-i18next/TransWithoutContext";
 import Lokali from "@/components/lokal/lokali";
 
 type Props = {
@@ -57,7 +56,10 @@ export default async function Home(props: Props) {
           {t("title")}
         </Typography>
         <Typography textAlign="center" mb={3}>
-          <Trans i18nKey={`description`} t={t} />
+          За више детаља посетите инстаграм страницу{" "}
+          <a href="https://www.instagram.com/sistem.restart?igsh=djY5bWw4bmljZTJ4">
+            SISTEM/СИСТЕМ
+          </a>
         </Typography>
 
         <Lokali />
