@@ -60,6 +60,11 @@ export default async function Home(props: Props) {
           <a href="https://www.instagram.com/sistem.restart?igsh=djY5bWw4bmljZTJ4">
             SISTEM/СИСТЕМ
           </a>
+          .
+          <br />
+          <a href="https://www.google.com/maps/@44.7080531,17.6487525,7z/data=!4m3!11m2!2suimhzfjWSxO2ldC6sz4HgA!3e3?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw==">
+            Додатни списак можете погледати овде.
+          </a>
         </Typography>
 
         <Lokali />
