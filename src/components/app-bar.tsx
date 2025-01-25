@@ -188,14 +188,14 @@ function ResponsiveAppBar() {
             {!!user?.role &&
               [RoleEnum.ADMIN].includes(Number(user?.role?.id)) && (
                 <>
-                  <Button
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "white", display: "block" }}
-                    component={Link}
-                    href="/admin-panel/users"
-                  >
-                    {t("common:navigation.users")}
-                  </Button>
+                  {/*<Button*/}
+                  {/*  onClick={handleCloseNavMenu}*/}
+                  {/*  sx={{ my: 2, color: "white", display: "block" }}*/}
+                  {/*  component={Link}*/}
+                  {/*  href="/admin-panel/users"*/}
+                  {/*>*/}
+                  {/*  {t("common:navigation.users")}*/}
+                  {/*</Button>*/}
                   <Button
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: "white", display: "block" }}
