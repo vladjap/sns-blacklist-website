@@ -1,5 +1,5 @@
-export const fallbackLanguage = "en" as const;
-export const languages = [fallbackLanguage, "rs"] as const;
+export const fallbackLanguage = "rs" as const;
+export const languages = [fallbackLanguage, "en"] as const;
 export const defaultNamespace = "common";
 export const cookieName = "i18next";
 

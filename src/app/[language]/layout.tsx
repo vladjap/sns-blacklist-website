@@ -23,7 +23,6 @@ import FacebookAuthProvider from "@/services/social-auth/facebook/facebook-auth-
 import ConfirmDialogProvider from "@/components/confirm-dialog/confirm-dialog-provider";
 import InitColorSchemeScript from "@/components/theme/init-color-scheme-script";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Head from "next/head";
 
 type Props = {
   params: Promise<{ language: string }>;
@@ -54,15 +53,6 @@ export default async function RootLayout(props: {
 
   return (
     <html lang={language} dir={dir(language)} suppressHydrationWarning>
-      <Head>
-        <title>My Page Title</title>
-        <meta property="og:title" content="SNS Blacklist" />
-        <meta property="og:description" content="SNS Lokali - blacklist" />
-        <meta property="og:image" content="/ruke.svg" />
-        <meta property="og:url" content="https://snsblacklist.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="SNS Blacklist" />
-      </Head>
       <body suppressHydrationWarning>
         <InitColorSchemeScript />
         <QueryClientProvider client={queryClient}>
