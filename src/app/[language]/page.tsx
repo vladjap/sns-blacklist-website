@@ -73,6 +73,31 @@ export default async function Home(props: Props) {
               [Megathread] Spisak ugostiteljskih objekata koji su se izrugali
               studentima
             </a>
+            <div
+              style={{
+                background: "white",
+                /* eslint-disable-next-line no-restricted-syntax */
+                marginTop: "20px",
+                fontWeight: "bold",
+                /* eslint-disable-next-line no-restricted-syntax */
+                padding: "20px",
+              }}
+            >
+              <span style={{ fontSize: "28px" }}>Дисклејмер за Ћаци:</span>{" "}
+              <br />
+              Сајт https://snsblacklist.com објављује информације о
+              угоститељским објектима који су радили или нису учествовали у
+              штрајку/бојкот позиву дана 24.01.2025. Све наведене информације на
+              Сајту прикупљене су из јавно доступних извора, као и од корисника
+              и посетилаца Сајта, а аутор Сајта није лично саставио нити
+              самостално креирао овај списак.
+              <br />
+              Циљ овог Сајта није позив на насиље, нападе или било какве сличне
+              активности, већ искључиво информисање јавности о угоститељским
+              објектима који нису одлучили да дају директну подршку студентима
+              на њихов позив. Све информације објављене на Сајту искључиво су
+              информативног карактера.
+            </div>
           </Typography>
         </div>
 
